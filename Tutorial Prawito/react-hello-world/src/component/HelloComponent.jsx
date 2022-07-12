@@ -1,8 +1,9 @@
 import React from 'react';
+import './HelloComponent.css'
 
 //Stateless Component
 const HelloComponent = () => {
-    return <div>Hello Stateless Component</div>;
+    return <p className='text-p'>Hello Stateless Component</p>;
   }
 
 export default HelloComponent;
