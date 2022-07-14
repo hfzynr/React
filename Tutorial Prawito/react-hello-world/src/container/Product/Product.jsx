@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import './Product.css'
-// import logo from './../../img/4k-logo-svgrepo-com.svg'
 import troley from './../../img/shopping-cart.png'
 import CardProduct from '../CardProduct/CardProduct';
 
