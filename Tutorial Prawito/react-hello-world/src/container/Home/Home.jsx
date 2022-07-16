@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
-import YoutubeComp from '../../component/YoutubeComp/YoutubeComp';
-import Product from '../Product/Product';
+// import YoutubeComp from '../../component/YoutubeComp/YoutubeComp';
+// import Product from '../Product/Product';
+import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
 
 class Home extends Component {
+    state = {
+        showComponent: true
+    }
+
+    componentDidMount(){
+        // setTimeout(() => {
+        //     this.setState({
+        //         showComponent: false
+        //     })
+        // },15000);
+    }
+
     render(){
         return(
             <div>
-                <p>Youtube Component</p>
+                {/* <p>Youtube Component</p>
                 <hr/>
                 <YoutubeComp 
                     img="https://images6.alphacoders.com/124/1242360.jpg" 
@@ -38,6 +51,12 @@ class Home extends Component {
                 <p>Counter</p>
                 <hr/>
                 <Product />
+                <hr/> */}
+                <p>LifeCycle Component</p>
+                <hr/>
+                {
+                    this.state.showComponent ? <LifeCycleComp /> : null
+                }
             </div>
         )
     }
