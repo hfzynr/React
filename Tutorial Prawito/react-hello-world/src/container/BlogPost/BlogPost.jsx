@@ -9,7 +9,7 @@ class BlogPost extends Component {
   };
 
   getPostAPI = () => {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then((result) => {
+    axios.get("http://localhost:3005/posts").then((result) => {
       this.setState({
         post: result.data,
       });
@@ -17,15 +17,9 @@ class BlogPost extends Component {
   };
 
   handleRemove = (data) => {
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/posts/${data}`)
-      .then((result) => {
-        if (result.status === 200) {
-          this.setState({
-            post: this.state.post.filter((post) => post.id !== data),
-          });
-        }
-      });
+    axios.delete(`http://localhost:3005/posts/${data}`).then((result) => {
+      this.getPostAPI();
+    });
   };
 
   componentDidMount() {
