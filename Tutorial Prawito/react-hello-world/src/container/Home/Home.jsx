@@ -1,26 +1,26 @@
-import React, {Component} from 'react';
-import BlogPost from '../BlogPost/BlogPost';
+import React, { Component } from "react";
+import BlogPost from "../BlogPost/BlogPost";
 // import YoutubeComp from '../../component/YoutubeComp/YoutubeComp';
 // import Product from '../Product/Product';
 // import LifeCycleComp from '../LifeCycleComp/LifeCycleComp';
 
 class Home extends Component {
-    state = {
-        showComponent: true
-    }
+  state = {
+    showComponent: true,
+  };
 
-    componentDidMount(){
-        // setTimeout(() => {
-        //     this.setState({
-        //         showComponent: false
-        //     })
-        // },15000);
-    }
+  componentDidMount() {
+    // setTimeout(() => {
+    //     this.setState({
+    //         showComponent: false
+    //     })
+    // },15000);
+  }
 
-    render(){
-        return(
-            <div>
-                {/* <p>Youtube Component</p>
+  render() {
+    return (
+      <div>
+        {/* <p>Youtube Component</p>
                 <hr/>
                 <YoutubeComp 
                     img="https://images6.alphacoders.com/124/1242360.jpg" 
@@ -53,17 +53,15 @@ class Home extends Component {
                 <hr/>
                 <Product />
                 <hr/> */}
-                {/* <p>LifeCycle Component</p>
+        {/* <p>LifeCycle Component</p>
                 <hr/>
                 {
                     this.state.showComponent ? <LifeCycleComp /> : null
                 } */}
-                <p>Blog Post</p>
-                <hr/>
-                <BlogPost />
-            </div>
-        )
-    }
+        <BlogPost />
+      </div>
+    );
+  }
 }
 
 export default Home;
