@@ -15,7 +15,7 @@ class BlogPost extends Component {
     }
 
     getPostAPI = () => {
-        axios.get('http://localhost:3004/posts')
+        axios.get('http://localhost:3004/posts?_sort=id&_order=desc')
         .then((result) => {
             this.setState({
                 post: result.data
@@ -26,17 +26,17 @@ class BlogPost extends Component {
     postDataToAPI = () => {
         axios.post('http://localhost:3004/posts', this.state.formBlogPost)
         .then((result => {
-            console.log(result);
-            }, (err) => {
+            alert('Data berhasil ditambahkan');
+            this.getPostAPI();
+            }), (err) => {
                 console.log('error : ',err);
-            }
-        ))
+            })
     }
 
     handleRemove = (data) => {
         console.log(data);
         axios.delete(`http://localhost:3004/posts/${data}`).then((result) => {
-            console.log(result);
+            alert('Data berhasil dihapus');
             this.getPostAPI();
         })
     }
